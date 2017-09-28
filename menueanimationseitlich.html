@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Bewegliches Menü seitlich</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: mistyrose;
+        }
+
+        .layout {
+            display: flex;
+            flex-flow: row wrap;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        @media all and (max-width: 600px) {
+            #m1 {
+                position: absolute;
+                left: -4.5em;
+                top: 0px;
+                transform: rotate(270deg);
+                border: 1px solid black;
+                transition: all 3s;
+                display: inline-block;
+            }
+
+            #m2 {
+                position: absolute;
+                left: -4.5em;
+                top: 100px;
+                transform: rotate(270deg);
+                border: 1px solid purple;
+                transition: all 3s;
+                display: inline-block;
+            }
+        }
+
+        @media all and (min-width: 600px) {
+            #m1 {
+                position: absolute;
+                left: -4.5em;
+                top: 0px;
+                transform: rotate(270deg);
+                border: 1px solid black;
+                transition: all 3s;
+                display: inline-block;
+            }
+
+            #m2 {
+                position: absolute;
+                left: -4.5em;
+                top: 100px;
+                transform: rotate(270deg);
+                border: 1px solid purple;
+                transition: all 3s;
+                display: inline-block;
+            }
+        }
+
+        #m1:hover,
+        #m2:hover {
+            left: 1px;
+            background-color: lime;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="layout">
+        <ul id="m1">
+            <li>3</li>
+            <li>2</li>
+            <li>1</li>
+            Menü 1<br>
+        </ul>
+
+        <ul id="m2">
+            <li>3</li>
+            <li>2</li>
+            <li>1</li>
+            Menü 2<br>
+        </ul>
+    </div>
+</body>
+
+</html>

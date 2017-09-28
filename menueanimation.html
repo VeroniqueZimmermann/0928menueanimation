@@ -6,63 +6,60 @@
     <title>Bewegliches Menü</title>
     <style>
         body {
+            font-family: Arial, Helvetica, sans-serif;
             background-color: mistyrose;
         }
+        
+        .layout {
+            display: flex;
+            flex-flow: row wrap;
+            font-weight: bold;
+            text-align: center;
+        }
 
-        #menue {
+        #m1 {
             position: absolute;
-            width: 100px;
-            height: 50px;
-            top: 0px;
+            top: -5em;
             left: 0px;
-            /*zieht alles mit ein*/
-            background-color: plum;
+            border: 1px solid black;
+            transition: all 3s;
+            display: inline-block;
         }
 
-
-        #menue1 {
+        #m2 {
             position: absolute;
-            width: 100px;
-            height: 50px;
-            top: 0px;
-            left: -45px;
-            transition: all 5s;
-            /*zieht alles mit ein*/
-            opacity: 0;
-            background-color: green;
+            top: -5em;
+            left: 100px;
+            border: 1px solid purple;
+            transition: all 3s;
+            display: inline-block;
         }
 
-        #menue2 {
-            position: absolute;
-            width: 100px;
-            height: 50px;
-            top: 0px;
-            left: -20px;
-            transition: all 10s;
-            /*zieht alles mit ein*/
-            opacity: 0;
-            background-color: yellow;
-        }
-
-        #menue1:hover,
-        #menue2:hover {
-            position: absolute;
-            top: 12%;
-            /*wie oft die Kugel dreht*/
-            opacity: 1;
+        #m1:hover,
+        #m2:hover {
+            top: 1px;
+            background-color: lime;
         }
     </style>
 
 </head>
 
 <body>
-    <div id="menue">Menue</div>
-    <div>Menue1</div>
-    <div id="menue2">Menue2</div>
-    <table id="menue1">
-        <tr><td>menue1</td><td>menue2</td></tr>
-    </table>
+    <div class="layout">
+        <ul id="m1">
+            <li>3</li>
+            <li>2</li>
+            <li>1</li>
+            Menü 1<br>
+        </ul>
 
+        <ul id="m2">
+            <li>3</li>
+            <li>2</li>
+            <li>1</li>
+            Menü 2<br>
+        </ul>
+    </div>
 </body>
 
 </html>
